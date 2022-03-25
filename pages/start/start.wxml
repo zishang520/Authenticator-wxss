@@ -1,0 +1,41 @@
+<view class="html">
+    <view class="body">
+        <view class="div mdl-layout__container mdl-color--primary">
+            <view class="div mdl-layout">
+                <view class="header mdl-layout__header mdl-layout__header--scroll">
+                    <header bgColor="" isBack="{{true}}">
+                        <view slot="backText">{{lang['Back']}}</view>
+                        <view slot="content">{{lang['Authenticator']}}</view>
+                    </header>
+                </view>
+                <view class="div mdl-layout__content mdl-color--grey-50">
+                    <view class="div mdl-grid">
+                        <view class="div mdl-cell mdl-cell--12-col">
+                            <view class="h4">
+                                {{lang['add-account']}}
+                            </view>
+                            <view class="div">{{lang['add-s']}}</view>
+                        </view>
+                    </view>
+                    <view class="div mdl-grid mdl-grid--no-spacing">
+                        <view class="div mdl-cell mdl-cell--12-col">
+                            <view class="ul demo-list-icon mdl-list">
+                                <button class="li mdl-list__item mdl-button" catchtap="openScan">
+                                    <view class="span mdl-list__item-primary-content">
+                                        <view class="i material-icons mdl-list__item-icon">photo_camera</view>{{lang['sqc']}}
+                                    </view>
+                                </button>
+                                <view class="hr"></view>
+                                <button class="li mdl-list__item mdl-button" catchtap="gotoInput">
+                                    <view class="span mdl-list__item-primary-content">
+                                        <view class="i material-icons mdl-list__item-icon">keyboard</view>{{lang['Enter-key']}}
+                                    </view>
+                                </button>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

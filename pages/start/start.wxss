@@ -1,0 +1,9 @@
+.demo-list-icon {
+    padding:0;
+    margin: 0;
+}
+.demo-list-icon .hr{
+    margin:0;
+    height:auto;
+    margin-left:68px;
+}

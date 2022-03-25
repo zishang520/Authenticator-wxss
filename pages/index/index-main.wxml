@@ -1,0 +1,245 @@
+<view class="html">
+    <view class="body">
+        <view class="div mdl-layout__container mdl-color--primary">
+            <view class="div mdl-layout">
+                <view class="header mdl-layout__header mdl-layout__header--scroll">
+                    <header bgColor="" isBack="{{false}}">
+                        <view slot="backText">{{lang['Back']}}</view>
+                        <view slot="content">{{lang['Authenticator']}}</view>
+                    </header>
+                </view>
+                <view class="div mdl-layout__content mdl-color--grey-100">
+                    <view class="div mdl-grid mdl-grid--no-spacing">
+                        <block wx:if="{{ FirstAdd }}">
+                            <view class="div mdl-cell mdl-cell--12-col">
+                                <view class="div mdl-grid">
+                                    <view class="div mdl-cell mdl-cell--12-col">
+                                        <view class="h4 head">{{lang['Account has been added']}}</view>
+                                    </view>
+                                </view>
+                            </view>
+                        </block>
+                        <view class="div mdl-cell mdl-cell--12-col">
+                            <view class="div auth">
+                                <view class="ul code-list">
+                                    <block wx:for="{{ DATA }}" wx:key="k">
+                                        <view class="li list" data="k" bindlongpress="Longpress" data-id="{{ item.id }}" data-access="{{ item.access1 }}" data-issuer="{{ item.issuer }}" data-label="{{ item.label }}" data-token="{{ item.token }}" data-type="{{ item.type }}">
+                                            <view class="h3 token">
+                                                <text class="strong">{{ item.token }}</text>
+                                            </view>
+                                            <view class="div info am-cf">
+                                                <view class="span email am-fl">
+                                                    {{ item.access }}
+                                                </view>
+                                                <view class="span time am-fr">
+                                                    <block wx:if="{{ item.type == 'hotp' }}">
+                                                        <block wx:if="{{ item.htop_ok }}">
+                                                            <view bindtap='getHotp' class="refresh" data-id="{{ item.id }}">
+                                                                <view class="i material-icons">refresh</view>
+                                                            </view>
+                                                        </block>
+                                                        <block wx:else>
+                                                            <view class="refresh-disable">
+                                                                <view class="i material-icons">refresh</view>
+                                                            </view>
+                                                        </block>
+                                                    </block>
+                                                    <block wx:else>
+                                                        <timer width="18px" percent="{{ item.percent }}" deg="{{ item.deg }}" />
+                                                    </block>
+                                                </view>
+                                            </view>
+                                        </view>
+                                    </block>
+                                </view>
+                            </view>
+                        </view>
+                        <block wx:if="{{ FirstAdd }}">
+                            <view class="div mdl-cell mdl-cell--12-col">
+                                <view class="div mdl-grid ">
+                                    <view class="div mdl-cell mdl-cell--12-col">
+                                        <view class="p">{{lang['added—help']}}</view>
+                                    </view>
+                                    <view class="div mdl-cell mdl-cell--12-col">
+                                        <view class="div center">
+                                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" catchtap="addAccount">{{lang['add-account']}}</button>
+                                        </view>
+                                    </view>
+                                </view>
+                            </view>
+                        </block>
+                        <view class="div mdl-cell mdl-cell--12-col">
+                            <view class="div block"></view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <block wx:if="{{ !FirstAdd }}">
+            <!-- Controller Button -->
+            <button type="button" class="onlineService mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored ipx" catchtap="showWidget">
+                <view class="i material-icons">add</view>
+            </button>
+        </block>
+        <!-- Rename -->
+        <view class="cu-modal {{RenameModal?'':'show'}}" bindtap="modalre" catchtouchmove="catchtouchmove">
+            <view class="cu-dialog padding text-left" catchtap="catchtouchmove">
+                <view class="h6 mdl-dialog__title">{{lang['Rename']}}</view>
+                <view class="div mdl-dialog__content">
+                    <view class="div mdl-textfield mdl-js-textfield is-focused is-dirty">
+                        <input class="input mdl-textfield__input" type="text" name="username" id="issue" value="{{ rename }}" data-id="{{ reid }}" bindinput="userNameInput" />
+                        <label class="mdl-textfield__label" for="issue"></label>
+                    </view>
+                </view>
+                <view class="div mdl-dialog__actions">
+                    <button type="button" class="mdl-button mdl-js-button mdl-button--primary" catchtap="modalreChange">{{lang['save']}}</button>
+                    <button type="button" class="mdl-button mdl-js-button mdl-button--primary" catchtap="modalre">{{lang['cancel']}}</button>
+                </view>
+            </view>
+        </view>
+        <!-- Delete -->
+        <view class="cu-modal {{DeleteModal?'':'show'}}" bindtap="modalChange" catchtouchmove="catchtouchmove">
+            <view class="cu-dialog padding text-left" catchtap="catchtouchmove">
+                <view class="div mdl-dialog__content">
+                    <view class="div delete_dialog_title">
+                        <view class="i material-icons icon">warning</view>
+                        <view class="span title_name">
+                            <text>{{lang['Whether to delete']}} </text>
+                            <text class="strong">{{ deleteinfo }}</text>
+                            <text>{{lang['?']}}</text>
+                        </view>
+                    </view>
+                    <view class="div delete_dialog_content padding-bottom-xs">
+                        <view class="div">
+                            <text>{{lang['Deleting the account will']}}</text>
+                            <text class="strong">{{lang['cause you cannot']}}</text>
+                            <text>{{lang['generate a verification code, but']}}</text>
+                            <text class="strong">{{lang['will not']}}</text>
+                            <text>{{lang['nted']}}</text>
+                        </view>
+                        <view class="div">　</view>
+                        <view class="div">
+                            <text>{{lang['dtt']}}</text>
+                        </view>
+                        <view class="div">　</view>
+                        <view class="div">
+                            <text>·{{lang['dt1']}}</text>
+                        </view>
+                        <view class="div">　</view>
+                        <view class="div">
+                            <text>·{{lang['dt2']}}</text>
+                        </view>
+                    </view>
+                </view>
+                <view class="div mdl-dialog__actions">
+                    <button type="button" class="mdl-button mdl-js-button mdl-button--accent" catchtap="modalDelete">{{lang['da']}}</button>
+                    <button type="button" class="mdl-button mdl-js-button mdl-button--primary" catchtap="modalChange">{{lang['cancel']}}</button>
+                </view>
+            </view>
+        </view>
+        <!-- Error -->
+        <view class="cu-modal {{ErrorModal?'':'show'}}" bindtap="ErrorTap" catchtouchmove="catchtouchmove">
+            <view class="cu-dialog padding text-left" catchtap="catchtouchmove">
+                <view class="div mdl-dialog__content">
+                    <view class="div delete_dialog_title">
+                        <view class="i material-icons icon">warning</view>
+                        <view class="span title_name">
+                            <text>{{lang['error']}}</text>
+                        </view>
+                    </view>
+                    <view class="div delete_dialog_content">
+                        <view class="div">
+                            <text>{{lang['crq']}}</text>
+                        </view>
+                    </view>
+                </view>
+                <view class="div mdl-dialog__actions">
+                    <button type="button" class="mdl-button mdl-js-button mdl-button--primary" catchtap="ErrorTap">{{lang['OK']}}</button>
+                </view>
+            </view>
+        </view>
+        <!-- +Operation panel -->
+        <view class="cu-modal bottom-modal {{Panel?'':'show'}}" bindtap="PanelTap" catchtouchmove="catchtouchmove">
+            <view class="cu-dialog-full" catchtap="catchtouchmove">
+                <view class="ul demo-list-icon mdl-list ipx">
+                    <button class="li mdl-list__item mdl-button" catchtap="openScan">
+                        <view class="span mdl-list__item-primary-content">
+                            <view class="i material-icons mdl-list__item-icon">photo_camera</view>{{lang['sqc']}}
+                        </view>
+                    </button>
+                    <view class="hr"></view>
+                    <button class="li mdl-list__item mdl-button" catchtap="gotoInput">
+                        <view class="span mdl-list__item-primary-content">
+                            <view class="i material-icons mdl-list__item-icon">keyboard</view>{{lang['Enter-key']}}
+                        </view>
+                    </button>
+                </view>
+            </view>
+        </view>
+        <!-- info -->
+        <view class="cu-modal {{InfoModal?'':'show'}}" bindtap="InfoTap" catchtouchmove="catchtouchmove">
+            <view class="cu-dialog padding text-left" catchtap="catchtouchmove">
+                <view class="div mdl-dialog__content">
+                    <view class="div delete_dialog_title">
+                        <view class="i material-icons icon">info</view>
+                        <view class="span title_name">
+                            <text>{{ lang['check_info'] }}</text>
+                        </view>
+                    </view>
+                    <view class="div delete_dialog_content padding-bottom-xs">
+                        <view class="div">
+                            <text>{{ lang['i-1'] }}</text>
+                            <text class="strong">{{ infoAccess }}</text>
+                            <text>{{ lang['i-2'] }}</text>
+                        </view>
+                        <view class="div info">
+                            <view class="ul mdl-list">
+                                <view class="li mdl-list__item">
+                                    <view class="span mdl-list__item-primary-content mdl-color-text--primary">
+                                        <view class="i material-icons mdl-list__item-icon mdl-color-text--primary">lock</view>
+                                        <view class="info-text">{{ infoToken }}</view>
+                                    </view>
+                                </view>
+                                <view class="li mdl-list__item">
+                                    <view class="span mdl-list__item-primary-content">
+                                        <view class="i material-icons mdl-list__item-icon mdl-color-text--primary">restore</view>
+                                        <view class="info-text">{{ infoCounter }}</view>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="div mdl-dialog__actions">
+                    <button type="button" class="mdl-button mdl-js-button mdl-button--primary" catchtap="InfoTap">{{lang['OK']}}</button>
+                </view>
+            </view>
+        </view>
+        <!-- Long press to edit -->
+        <view class="cu-modal bottom-modal {{MessageModal?'':'show'}}" bindtap="MessageTap" catchtouchmove="catchtouchmove">
+            <view class="cu-dialog-full" catchtap="catchtouchmove">
+                <view class="ul demo-list-icon mdl-list ipx">
+                    <button class="li mdl-list__item mdl-button" catchtap="editActionSheet" data-id="{{ model_id }}" data-access="{{ model_access }}" data-label="{{ model_label }}">
+                        <view class="span mdl-list__item-primary-content">
+                            <view class="i material-icons mdl-list__item-icon">edit</view>{{lang['edit']}}
+                        </view>
+                    </button>
+                    <view class="hr"></view>
+                    <button class="li mdl-list__item mdl-button" catchtap="deleteActionSheet" data-id="{{ model_id }}" data-access="{{ model_access }}" data-label="{{ model_label }}">
+                        <view class="span mdl-list__item-primary-content">
+                            <view class="i material-icons mdl-list__item-icon">delete</view>{{lang['delete']}}
+                        </view>
+                    </button>
+                    <block wx:if="{{ type == 'hotp' }}">
+                        <view class="hr"></view>
+                        <button class="li mdl-list__item mdl-button" catchtap="infoActionSheet" data-id="{{ model_id }}" data-access="{{ model_access }}" data-label="{{ model_label }}">
+                            <view class="span mdl-list__item-primary-content">
+                                <view class="i material-icons mdl-list__item-icon">info</view>{{lang['check_info']}}
+                            </view>
+                        </button>
+                    </block>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

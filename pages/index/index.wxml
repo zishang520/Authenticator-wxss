@@ -1,0 +1,6 @@
+<block wx:if="{{ DATA_length == 0 }}">
+    <include src="index-init.wxml" />
+</block>
+<block wx:else>
+    <include src="index-main.wxml" />
+</block>

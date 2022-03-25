@@ -1,0 +1,16 @@
+<view class="cu-custom" style="height:{{CustomBar}}px">
+    <view class="cu-bar fixed {{bgColor}}" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
+        <view class="action" bindtap="BackPage" wx:if="{{isBack}}">
+            <text class="i material-icons mdl-list__item-icon mdl-color-text--primary-contrast">keyboard_arrow_left</text>
+            <slot name="backText"></slot>
+        </view>
+        <view class="action border-custom" wx:if="{{isCustom}}" style="width:{{Custom.width}}px;height:{{Custom.height}}px;margin-left:calc(320px -{{Custom.right}}px)">
+            <text class="i material-icons mdl-list__item-icon mdl-color-text--primary-contrast" bindtap="BackPage">keyboard_arrow_left</text>
+            <text class="i material-icons mdl-list__item-icon mdl-color-text--primary-contrast" bindtap="toHome">home</text>
+        </view>
+        <view class="content" style="top:{{StatusBar}}px">
+            <slot name="content"></slot>
+        </view>
+        <slot name="right"></slot>
+    </view>
+</view>

@@ -1,0 +1,41 @@
+.hide{
+  display: none;
+}
+.am-cf:after, .am-cf:before {
+    content: " ";
+    display: table;
+}
+.am-cf:after {
+    clear: both;
+}
+.am-fl {
+    float: left;
+}
+.am-fr {
+    float: right;
+}
+.mdl-textfield{
+    width:100%;
+}
+.mdl-textfield__input{
+    color:rgb(0, 0, 0);
+    caret-color:rgb(0, 0, 0);
+    min-height:24px;
+    height:24px;
+}
+.foot_bar{
+    position: relative;
+    color: rgba(0, 0, 0, .54);
+    font-size: 1rem;
+    line-height: 18px;
+    padding: 16px;
+    width: 100%
+}
+.select-wrap {
+   width: 180px;
+}
+.more_type{
+    padding:0;
+    min-height:inherit;
+    color:var(--black);
+}

@@ -1,0 +1,53 @@
+<view class="html" catchtap="closeSelect">
+    <view class="body">
+        <view class="div mdl-layout__container mdl-color--primary">
+            <view class="div mdl-layout">
+                <view class="header mdl-layout__header mdl-layout__header--scroll">
+                    <header bgColor="" isBack="{{true}}">
+                        <view slot="backText">{{lang['Back']}}</view>
+                        <view slot="content">{{lang['it']}}</view>
+                    </header>
+                </view>
+                <view class="div mdl-layout__content mdl-color--grey-50">
+                    <view class="div mdl-grid mdl-grid--no-spacing">
+                        <view class="div mdl-cell mdl-cell--12-col">
+                            <view class="div">
+                                <form class="form" bindsubmit="formSubmit">
+                                    <view class="div mdl-card__supporting-text">
+                                        <view class="div mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded {{usernamefocus ? 'is-focused' : ''}} {{usernameinput ? 'is-dirty' : ''}}">
+                                            <input class="input mdl-textfield__input" bindfocus="Inputfocus" bindblur="Inputblur" bindinput="Inputinput" type="text" name="username" id="username" value="" focus="{{true}}" />
+                                            <label class="mdl-textfield__label" for="username">{{lang['ih']}}</label>
+                                        </view>
+                                        <view class="div mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded {{tokenfocus ? 'is-focused' : ''}} {{tokeninput ? 'is-dirty' : ''}} {{tokenerror ? 'is-invalid' : ''}}">
+                                            <input class="input mdl-textfield__input" bindfocus="Inputfocus" bindblur="Inputblur" bindinput="Inputinput" type="text" name="token" id="token" value="" />
+                                            <label class="mdl-textfield__label" for="token">{{lang['ik']}}</label>
+                                            <view class="span mdl-textfield__error">{{ errorMsg }}</view>
+                                        </view>
+                                    </view>
+                                    <input type="text" name="type" value="{{index}}" class="hide" />
+                                    <view class="div foot_bar am-fc">
+                                        <view class="span am-fl select-wrap">
+                                            <select id="select" options="{{options}}" key="id" text="name" bind:change="change"></select>
+                                        </view>
+                                        <view class="span am-fr">
+                                            <button formType="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">　{{lang['add']}}　</button>
+                                        </view>
+                                    </view>
+                                </form>
+                            </view>
+                        </view>
+                        <view class="div mdl-cell mdl-cell--12-col">
+                            <view class="div mdl-grid ">
+                                <view class="div mdl-cell mdl-cell--12-col">
+                                    <view class="p">
+                                        <view class="span text-red">{{lang['nt']}}</view>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

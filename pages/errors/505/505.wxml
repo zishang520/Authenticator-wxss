@@ -1,0 +1,46 @@
+<view class="html">
+    <view class="body">
+        <view class="div mdl-layout__container mdl-color--primary init">
+            <view class="div mdl-layout">
+                <view class="header mdl-layout__header mdl-layout__header--scroll">
+                    <header bgColor="" isBack="{{false}}">
+                        <view slot="backText">{{lang['Back']}}</view>
+                        <view slot="content">505</view>
+                    </header>
+                </view>
+                <view class="div mdl-layout__content">
+                    <view class="div mdl-grid mdl-grid--no-spacing" style="height:calc(100vh - {{CustomBar}}px);height:calc(100vh - {{CustomBar}}px - constant(safe-area-inset-bottom));height:calc(100vh - {{CustomBar}}px - env(safe-area-inset-bottom));">
+                        <view class="div mdl-cell mdl-cell--middle mdl-cell--12-col mdl-cell--hide-tablet mdl-cell--hide-desktop">
+                            <view class="div mdl-grid">
+                                <view class="div mdl-cell mdl-cell--middle mdl-cell--12-col-phone">
+                                    <view class="h5 center mdl-color-text--primary-contrast">
+                                        {{lang['e']}}
+                                    </view>
+                                    <view class="div center logo">
+                                        <view class="i material-icons warning mdl-color-text--primary-contrast">error_outline</view>
+                                    </view>
+                                    <view class="p mdl-color-text--primary-contrast">{{lang['es']}}</view>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="div mdl-cell mdl-cell--middle mdl-cell--12-col mdl-cell--hide-phone">
+                            <view class="div mdl-grid">
+                                <view class="div mdl-cell mdl-cell--middle mdl-cell--4-col-tablet mdl-cell--6-col-desktop">
+                                    <view class="div center logo">
+                                        <view class="i material-icons warning mdl-color-text--primary-contrast">error_outline</view>
+                                    </view>
+                                </view>
+                                <view class="div mdl-cell mdl-cell--middle mdl-cell--4-col-tablet mdl-cell--6-col-desktop">
+                                    <view class="h5 center mdl-color-text--primary-contrast">
+                                        {{lang['e']}}
+                                    </view>
+                                    <view class="p mdl-color-text--primary-contrast">{{lang['es']}}</view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

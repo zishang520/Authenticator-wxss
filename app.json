@@ -1,0 +1,27 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/input/input",
+        "pages/start/start",
+        "pages/help/help",
+        "pages/errors/505/505"
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "@navigationBarBackgroundColor",
+        "navigationBarTitleText": "身份验证器",
+        "backgroundColor": "@backgroundColor",
+        "backgroundTextStyle": "@backgroundTextStyle",
+        "navigationStyle": "custom",
+        "navigationBarTextStyle": "@navigationBarTextStyle"
+    },
+    "usingComponents": {
+        "header": "/components/header/header",
+        "timer": "/components/timer/timer",
+        "select": "/components/select/select"
+    },
+    "resizable": true,
+    "darkmode": true,
+    "lazyCodeLoading": "requiredComponents",
+    "themeLocation": "theme.json",
+    "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,123 @@
+page {
+    --transparent: transparent;
+    --red: #dd2c00;
+    --orange: #f37b1d;
+    --yellow: #fbbd08;
+    --olive: #8dc63f;
+    --green: #39b54a;
+    --cyan: #1cbbb4;
+    --blue: #4285f4;
+    --purple: #6739b6;
+    --mauve: #9c26b0;
+    --pink: #e03997;
+    --brown: #a5673f;
+    --grey: #8799a3;
+    --black: #333333;
+    --darkGray: #666666;
+    --gray: #aaaaaa;
+    --grey-50: #fafafa;
+    --grey-100: #f5f5f5;
+    --white: #ffffff;
+    --whiteLight: #f8f8f8;
+    --whiteActive: rgba(158, 158, 158, .2);
+    /* 浅色 */
+    --redLight: #fadbd9;
+    --orangeLight: #fde6d2;
+    --yellowLight: #fef2ce;
+    --oliveLight: #e8f4d9;
+    --greenLight: #d7f0db;
+    --cyanLight: #d2f1f0;
+    --blueLight: #cce6ff;
+    --purpleLight: #e1d7f0;
+    --mauveLight: #ebd4ef;
+    --pinkLight: #f9d7ea;
+    --brownLight: #ede1d9;
+    --greyLight: #e7ebed;
+    /* 渐变色 */
+    --gradualRed: linear-gradient(45deg, #f43f3b, #ec008c);
+    --gradualOrange: linear-gradient(45deg, #ff9700, #ed1c24);
+    --gradualGreen: linear-gradient(45deg, #39b54a, #8dc63f);
+    --gradualPurple: linear-gradient(45deg, #9000ff, #5e00ff);
+    --gradualPink: linear-gradient(45deg, #ec008c, #6739b6);
+    --gradualBlue: linear-gradient(45deg, #4285f4, #1cbbb4);
+    --gradualGray: linear-gradient(0deg, #fafafa, transparent);
+    /* 阴影透明色 */
+    --ShadowSize: 3px 3px 4px;
+    --redShadow: rgba(204, 69, 59, 0.2);
+    --orangeShadow: rgba(217, 109, 26, 0.2);
+    --yellowShadow: rgba(224, 170, 7, 0.2);
+    --oliveShadow: rgba(124, 173, 55, 0.2);
+    --greenShadow: rgba(48, 156, 63, 0.2);
+    --cyanShadow: rgba(28, 187, 180, 0.2);
+    --blueShadow: rgba(0, 102, 204, 0.2);
+    --purpleShadow: rgba(88, 48, 156, 0.2);
+    --mauveShadow: rgba(133, 33, 150, 0.2);
+    --pinkShadow: rgba(199, 50, 134, 0.2);
+    --brownShadow: rgba(140, 88, 53, 0.2);
+    --greyShadow: rgba(114, 130, 138, 0.2);
+    --grayShadow: rgba(114, 130, 138, 0.2);
+    --blackShadow: rgba(26, 26, 26, 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+    page {
+        --transparent: transparent;
+        --red: #686868;
+        --orange: #f37b1d;
+        --yellow: #fbbd08;
+        --olive: #8dc63f;
+        --green: #39b54a;
+        --cyan: #444444;
+        --blue: #333333;
+        --purple: #6739b6;
+        --mauve: #9c26b0;
+        --pink: #e03997;
+        --brown: #a5673f;
+        --grey: #5d6d7c;
+        --black: #444444;
+        --darkGray: #666666;
+        --gray: #aaaaaa;
+        --grey-50: #9a9a9a;
+        --grey-100: #9e9e9e;
+        --white: #aaaaaa;
+        --whiteLight: #a1a1a1;
+        --whiteActive: rgba(109, 109, 109, .6);
+        /* 浅色 */
+        --redLight: #fadbd9;
+        --orangeLight: #fde6d2;
+        --yellowLight: #fef2ce;
+        --oliveLight: #e8f4d9;
+        --greenLight: #d7f0db;
+        --cyanLight: #d2f1f0;
+        --blueLight: #cce6ff;
+        --purpleLight: #e1d7f0;
+        --mauveLight: #ebd4ef;
+        --pinkLight: #f9d7ea;
+        --brownLight: #ede1d9;
+        --greyLight: #e7ebed;
+        /* 渐变色 */
+        --gradualRed: linear-gradient(45deg, #f43f3b, #ec008c);
+        --gradualOrange: linear-gradient(45deg, #ff9700, #ed1c24);
+        --gradualGreen: linear-gradient(45deg, #39b54a, #8dc63f);
+        --gradualPurple: linear-gradient(45deg, #9000ff, #5e00ff);
+        --gradualPink: linear-gradient(45deg, #ec008c, #6739b6);
+        --gradualBlue: linear-gradient(45deg, #333333, #444444);
+        --gradualGray: linear-gradient(0deg, #9e9e9e, transparent);
+        /* 阴影透明色 */
+        --ShadowSize: 3px 3px 4px;
+        --redShadow: rgba(204, 69, 59, 0.2);
+        --orangeShadow: rgba(217, 109, 26, 0.2);
+        --yellowShadow: rgba(224, 170, 7, 0.2);
+        --oliveShadow: rgba(124, 173, 55, 0.2);
+        --greenShadow: rgba(48, 156, 63, 0.2);
+        --cyanShadow: rgba(28, 187, 180, 0.2);
+        --blueShadow: rgba(26, 26, 26, 0.2);
+        --purpleShadow: rgba(88, 48, 156, 0.2);
+        --mauveShadow: rgba(133, 33, 150, 0.2);
+        --pinkShadow: rgba(199, 50, 134, 0.2);
+        --brownShadow: rgba(140, 88, 53, 0.2);
+        --greyShadow: rgba(114, 130, 138, 0.2);
+        --grayShadow: rgba(114, 130, 138, 0.2);
+        --blackShadow: rgba(26, 26, 26, 0.2);
+    }
+}

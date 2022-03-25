@@ -1,0 +1,49 @@
+.am-cf:after, .am-cf:before {
+  content: " ";
+  display: table;
+}
+
+.am-cf:after {
+  clear: both;
+}
+
+.am-fl {
+  float: left;
+}
+
+.am-fr {
+  float: right;
+}
+
+.mdl-list {
+    padding:0;
+    margin:0;
+}
+
+.mdl-list .mdl-list__item {
+    padding: 0;
+    font-size: 14px;
+}
+
+.full-screen {
+  height:100vh;
+}
+
+.logo .img {
+    width: 100%;
+    height: auto;
+}
+
+.footer {
+    width:100%;
+    position:fixed;
+    bottom:0;
+    z-index:2;
+}
+
+@supports (bottom: constant(safe-area-inset-bottom)) or (bottom: env(safe-area-inset-bottom)) {
+    .ipx {
+        margin-bottom: constant(safe-area-inset-bottom);
+        margin-bottom: env(safe-area-inset-bottom);
+    }
+}

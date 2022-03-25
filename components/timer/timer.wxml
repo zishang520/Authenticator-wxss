@@ -1,0 +1,6 @@
+<view class="div timer_pietimer fill" style="font-size: {{width}};">
+    <view class="div slice{{percent > 50 ? ' gt50' : ''}}">
+        <view class="div pie" style="-moz-transform: rotate({{ percent <= 50 ? 0 : deg - 180 }}deg);-webkit-transform: rotate({{ percent <= 50 ? 0 : deg - 180 }}deg);-o-transform: rotate({{ percent <= 50 ? 0 : deg - 180 }}deg);transform: rotate({{ percent <= 50 ? 0 : deg - 180 }}deg);transition-property: {{ percent <= 50 ? 'none' : 'all' }};"></view>
+        <view wx:if="{{ percent <= 50 || percent == 100  }}" class="div pie fill" style="-moz-transform: rotate({{ (percent == 100 ? 0 : deg) + 180 }}deg);-webkit-transform: rotate({{ (percent == 100 ? 0 : deg) + 180 }}deg);-o-transform: rotate({{ (percent == 100 ? 0 : deg) + 180 }}deg);transform: rotate({{ (percent == 100 ? 0 : deg) + 180 }}deg);transition-property: {{ percent > 50 ? 'none' : 'all' }};"></view>
+    </view>
+</view>

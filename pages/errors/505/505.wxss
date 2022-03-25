@@ -1,0 +1,6 @@
+.warning {
+    font-size:8em;
+}
+.full-screen {
+  height:100vh;
+}

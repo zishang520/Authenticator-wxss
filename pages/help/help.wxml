@@ -1,0 +1,173 @@
+<view class="html">
+    <view class="body">
+        <view class="div mdl-layout__container mdl-color--primary">
+            <view class="div mdl-layout">
+                <view class="header mdl-layout__header mdl-layout__header--scroll">
+                    <header bgColor="" isBack="{{true}}">
+                        <view slot="backText">{{lang['Back']}}</view>
+                        <view slot="content">{{lang['working principle']}}</view>
+                    </header>
+                </view>
+                <view class="div mdl-layout__content">
+                    <view class="div mdl-grid mdl-grid--no-spacing">
+                        <view class="div mdl-cell mdl-cell--middle mdl-cell--12-col">
+                            <swiper indicator-dots="{{true}}" duration="160" indicator-color="rgba(255,255,255,0.3)" indicator-active-color="rgb(255,255,255)" bindchange="Swiperchange" style="height:calc(100vh - {{CustomBar}}px);height:calc(100vh - {{CustomBar}}px);height:calc(100vh - {{CustomBar}}px - constant(safe-area-inset-bottom));height:calc(100vh - {{CustomBar}}px - env(safe-area-inset-bottom));" current="{{ help_current }}">
+                                <swiper-item>
+                                    <view class="div mdl-grid mdl-grid--no-spacing" style="height:calc(100vh - {{CustomBar}}px);height:calc(100vh - {{CustomBar}}px - constant(safe-area-inset-bottom));height:calc(100vh - {{CustomBar}}px - env(safe-area-inset-bottom));">
+                                        <view class="div mdl-cell mdl-cell--12-col mdl-cell--hide-tablet mdl-cell--hide-desktop">
+                                            <view class="div mdl-grid">
+                                                <view class="div mdl-cell mdl-cell--middle mdl-cell--12-col-phone">
+                                                    <view class="h5 center mdl-color-text--primary-contrast">
+                                                        {{lang['login account']}}
+                                                    </view>
+                                                    <view class="div center logo">
+                                                        <image class="img" mode="widthFix" src="/images/one.png"></image>
+                                                    </view>
+                                                    <view class="p mdl-color-text--primary-contrast">{{lang['one1']}}</view>
+                                                    <view class="p mdl-color-text--primary-contrast">{{lang['one2']}}</view>
+                                                </view>
+                                            </view>
+                                        </view>
+                                        <view class="div mdl-cell mdl-cell--middle mdl-cell--12-col mdl-cell--hide-phone">
+                                            <view class="div mdl-grid">
+                                                <view class="div mdl-cell mdl-cell--middle mdl-cell--4-col-tablet mdl-cell--6-col-desktop">
+                                                    <view class="div center logo">
+                                                        <image class="img" mode="widthFix" src="/images/one.png"></image>
+                                                    </view>
+                                                </view>
+                                                <view class="div mdl-cell mdl-cell--middle mdl-cell--4-col-tablet mdl-cell--6-col-desktop">
+                                                    <view class="h5 center mdl-color-text--primary-contrast">
+                                                        {{lang['login account']}}
+                                                    </view>
+                                                    <view class="p mdl-color-text--primary-contrast">{{lang['one1']}}</view>
+                                                    <view class="p mdl-color-text--primary-contrast">{{lang['one2']}}</view>
+                                                </view>
+                                            </view>
+                                        </view>
+                                    </view>
+                                </swiper-item>
+                                <swiper-item>
+                                    <view class="div mdl-grid mdl-grid--no-spacing" style="height:calc(100vh - {{CustomBar}}px);height:calc(100vh - {{CustomBar}}px - constant(safe-area-inset-bottom));height:calc(100vh - {{CustomBar}}px - env(safe-area-inset-bottom));">
+                                        <view class="div mdl-cell mdl-cell--12-col mdl-cell--hide-tablet mdl-cell--hide-desktop">
+                                            <view class="div mdl-grid">
+                                                <view class="div mdl-cell mdl-cell--middle mdl-cell--12-col-phone">
+                                                    <view class="h5 center mdl-color-text--primary-contrast">
+                                                        {{lang['ttt']}}
+                                                    </view>
+                                                    <view class="div center logo">
+                                                        <image class="img" mode="widthFix" src="/images/two.png"></image>
+                                                    </view>
+                                                    <view class="p mdl-color-text--primary-contrast">{{lang['tt1']}}</view>
+                                                    <view class="p mdl-color-text--primary-contrast">{{lang['tt2']}}</view>
+                                                </view>
+                                            </view>
+                                        </view>
+                                        <view class="div mdl-cell mdl-cell--middle mdl-cell--12-col mdl-cell--hide-phone">
+                                            <view class="div mdl-grid">
+                                                <view class="div mdl-cell mdl-cell--middle mdl-cell--4-col-tablet mdl-cell--6-col-desktop">
+                                                    <view class="div center logo">
+                                                        <image class="img" mode="widthFix" src="/images/two.png"></image>
+                                                    </view>
+                                                </view>
+                                                <view class="div mdl-cell mdl-cell--middle mdl-cell--4-col-tablet mdl-cell--6-col-desktop">
+                                                    <view class="h5 center mdl-color-text--primary-contrast">
+                                                        {{lang['ttt']}}
+                                                    </view>
+                                                    <view class="p mdl-color-text--primary-contrast">{{lang['tt1']}}</view>
+                                                    <view class="p mdl-color-text--primary-contrast">{{lang['tt2']}}</view>
+                                                </view>
+                                            </view>
+                                        </view>
+                                    </view>
+                                </swiper-item>
+                                <swiper-item>
+                                    <view class="div mdl-grid mdl-grid--no-spacing" style="height:calc(100vh - {{CustomBar}}px);height:calc(100vh - {{CustomBar}}px - constant(safe-area-inset-bottom));height:calc(100vh - {{CustomBar}}px - env(safe-area-inset-bottom));">
+                                        <view class="div mdl-cell mdl-cell--12-col mdl-cell--hide-tablet mdl-cell--hide-desktop">
+                                            <view class="div mdl-grid">
+                                                <view class="div mdl-cell mdl-cell--middle mdl-cell--12-col-phone">
+                                                    <view class="h5 center mdl-color-text--primary-contrast">
+                                                        {{lang['rrt']}}
+                                                    </view>
+                                                    <view class="div center logo">
+                                                        <image class="img" mode="widthFix" src="/images/three.png"></image>
+                                                    </view>
+                                                    <view class="p mdl-color-text--primary-contrast">{{lang['rr1']}}</view>
+                                                    <view class="ul mdl-list">
+                                                        <view class="li mdl-list__item">
+                                                            <view class="span mdl-list__item-primary-content mdl-color-text--primary-contrast">
+                                                                <view class="i material-icons mdl-list__item-icon mdl-color-text--primary-contrast">phone</view>{{lang['rr2']}}
+                                                            </view>
+                                                        </view>
+                                                        <view class="li mdl-list__item">
+                                                            <view class="span mdl-list__item-primary-content mdl-color-text--primary-contrast">
+                                                                <view class="i material-icons mdl-list__item-icon mdl-color-text--primary-contrast">lock</view>{{lang['rr3']}}
+                                                            </view>
+                                                        </view>
+                                                        <view class="li mdl-list__item">
+                                                            <view class="span mdl-list__item-primary-content mdl-color-text--primary-contrast">
+                                                                <view class="i material-icons mdl-list__item-icon mdl-color-text--primary-contrast">highlight_off</view>{{lang['rr4']}}
+                                                            </view>
+                                                        </view>
+                                                    </view>
+                                                </view>
+                                            </view>
+                                        </view>
+                                        <view class="div mdl-cell mdl-cell--middle mdl-cell--12-col mdl-cell--hide-phone">
+                                            <view class="div mdl-grid">
+                                                <view class="div mdl-cell mdl-cell--middle mdl-cell--4-col-tablet mdl-cell--6-col-desktop">
+                                                    <view class="div center logo">
+                                                        <image class="img" mode="widthFix" src="/images/three.png"></image>
+                                                    </view>
+                                                </view>
+                                                <view class="div mdl-cell mdl-cell--middle mdl-cell--4-col-tablet mdl-cell--6-col-desktop">
+                                                    <view class="h5 center mdl-color-text--primary-contrast">
+                                                        {{lang['rrt']}}
+                                                    </view>
+                                                    <view class="p mdl-color-text--primary-contrast">{{lang['rr1']}}</view>
+                                                    <view class="ul mdl-list">
+                                                        <view class="li mdl-list__item">
+                                                            <view class="span mdl-list__item-primary-content mdl-color-text--primary-contrast">
+                                                                <view class="i material-icons mdl-list__item-icon mdl-color-text--primary-contrast">phone</view>{{lang['rr2']}}
+                                                            </view>
+                                                        </view>
+                                                        <view class="li mdl-list__item">
+                                                            <view class="span mdl-list__item-primary-content mdl-color-text--primary-contrast">
+                                                                <view class="i material-icons mdl-list__item-icon mdl-color-text--primary-contrast">lock</view>{{lang['rr3']}}
+                                                            </view>
+                                                        </view>
+                                                        <view class="li mdl-list__item">
+                                                            <view class="span mdl-list__item-primary-content mdl-color-text--primary-contrast">
+                                                                <view class="i material-icons mdl-list__item-icon mdl-color-text--primary-contrast">highlight_off</view>{{lang['rr4']}}
+                                                            </view>
+                                                        </view>
+                                                    </view>
+                                                </view>
+                                            </view>
+                                        </view>
+                                    </view>
+                                </swiper-item>
+                            </swiper>
+                            <view class="footer ipx">
+                                <view class="div mdl-card__actions mdl-card--border">
+                                    <block wx:if="{{ help_current < 2 }}">
+                                        <view class="div am-cf">
+                                            <button class="mdl-button mdl-js-button mdl-color-text--primary-contrast am-fl" catchtap="toJump">{{lang['skip']}}</button>
+                                            <button class="mdl-button mdl-js-button mdl-color-text--primary-contrast am-fr" catchtap="toNext">
+                                                <view class="i material-icons mdl-list__item-icon mdl-color-text--primary-contrast">keyboard_arrow_right</view>
+                                            </button>
+                                        </view>
+                                    </block>
+                                    <block wx:elif="{{ help_current == 2 }}">
+                                        <view class="div am-cf">
+                                            <button class="mdl-button mdl-js-button mdl-color-text--primary-contrast am-fr" catchtap="toJump">{{lang['complete']}}</button>
+                                        </view>
+                                    </block>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

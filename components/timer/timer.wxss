@@ -1,0 +1,36 @@
+.timer_pietimer {
+    position: relative;
+    font-size: 200px;
+    width: 1em;
+    height: 1em;
+}
+
+.timer_pietimer>.slice {
+    width: 1em;
+    height: 1em;
+    clip-path: none;
+}
+
+.timer_pietimer>.slice.gt50 {
+    clip-path: inset(0em 50% 0em 0em round 0%);
+}
+
+.timer_pietimer>.slice>.pie {
+    position: absolute;
+    width: 0.8em;
+    height: 0.8em;
+    clip-path: inset(0em 50% 0em 0em round 0%);
+    -moz-border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    border-radius: 0.5em;
+    background: var(--blue);
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+}
+
+.timer_pietimer.fill>.slice>.pie {
+    border: none;
+    width: 1em;
+    height: 1em;
+}

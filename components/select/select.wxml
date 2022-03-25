@@ -1,0 +1,12 @@
+<view class="select-box">
+    <view class="select-current" catchtap="openClose">
+        <view class="span current-name">{{ current[text] }}</view>
+    </view>
+    <view class="select option-list" wx:if="{{ isShow }}" catchtap="optionTap">
+        <view class="option mdl-list__item mdl-button" wx:for="{{ options }}" wx:key="{{ item[key] }}" data-id="{{ item[key] }}" data-name="{{ item[text] }}">
+            <view class="span mdl-list__item-primary-content" data-id="{{ item[key] }}" data-name="{{ item[text] }}">
+                {{ item[text] }}
+            </view>
+        </view>
+    </view>
+</view>
