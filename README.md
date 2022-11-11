@@ -7,3 +7,8 @@
 <img src="https://raw.githubusercontent.com/zishang520/Authenticator-wxss/master/wxqr.jpg" alt="动态密码验证器小程序码" width="300px" height="auto" align="bottom" /> <img src="https://raw.githubusercontent.com/zishang520/Authenticator-wxss/master/823B8A5AE47505D17FCAC6F7CA38449F.jpg" alt="赞赏" width="300px" height="auto" align="bottom" />
 
 
+# License
+
+* 动态密码验证器与经修改的 BSD-3-Clause 许可的 crypto-js 库链接。 crypto-js 的源代码与 BSD-3-Clause 许可证均在 [CryptoJS.js](https://github.com/zishang520/Authenticator-wxss/blob/master/utils/CryptoJS.js) 中提供。
+* 动态密码验证器与经修改的 BSD-3-Clause 许可的 ieee754 库链接。 ieee754 的源代码与 BSD-3-Clause 许可证均在 [ieee754.js](https://github.com/zishang520/Authenticator-wxss/blob/master/utils/ieee754.js) 中提供。
+
